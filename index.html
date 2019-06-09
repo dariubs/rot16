@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ROT16 for persian</title>
+
+    <style>
+    .tc {
+        text-align: center;
+    }
+
+    .ta {
+        width: 420px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        resize: none;
+        direction: rtl;
+        text-align: right;
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <h1 class="tc">ROT 16 for persian</h1>
+
+    <textarea id="inp" class="ta"></textarea>
+    <p class="tc">⬇</p>
+    <textarea id="outp" class="ta"></textarea>
+    <div class="tc">
+        <button onclick="dorot16()">rot16</button>
+    </div>
+    
+    <script>
+        function rot16(s) {
+            return s.replace(/[\u0627-\u06CC]/g, function (c) {
+                return "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی".charAt(
+                    "صضطظعغفقکگلمنوهیابپتثجچحخدذرزژسش".indexOf(c)
+                );
+            });
+        }
+
+        function dorot16() {
+            let inp = document.getElementById("inp").value;
+            out = rot16(inp)
+            document.getElementById("outp").value = out;
+        }
+    </script>
+</body>
+</html>
