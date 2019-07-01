@@ -1,0 +1,17 @@
+h1, p, a, textarea, button {
+    font-family: 'Vazir', sans-serif;
+}
+
+.tc {
+    text-align: center;
+}
+
+.ta {
+    width: 420px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    resize: none;
+    direction: rtl;
+    text-align: right;
+}
